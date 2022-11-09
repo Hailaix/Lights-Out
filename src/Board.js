@@ -76,6 +76,10 @@ function Board({ nrows=3, ncols=3, chanceLightStartsOn=.25 }) {
 
       // TODO: in the copy, flip this cell and the cells around it
       flipCell(y, x, newBoard);
+      flipCell(y-1, x, newBoard);
+      flipCell(y+1, x, newBoard);
+      flipCell(y, x-1, newBoard);
+      flipCell(y, x+1, newBoard);
       // TODO: return the copy
       return newBoard;
     });
